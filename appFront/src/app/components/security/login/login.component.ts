@@ -82,7 +82,7 @@ export class LoginComponent {
         },
         complete: () => {
           if (sessionStorage.getItem('success') == 'true') {
-            this.router.navigateByUrl('dashboard');
+            this.router.navigateByUrl('/monitorGlobal');
             window.location.reload();
           }
         },
