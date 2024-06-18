@@ -48,6 +48,7 @@ public class AppServiceImpl implements IAppService {
             plant.setReadings(plantResponse.getReadings());
             plant.setAvgAlerts(plantResponse.getAvgAlerts());
             plant.setRedAlerts(plantResponse.getRedAlerts());
+            plant.setDisabledSensors(plantResponse.getDisabledSensors());
         } else {
             return new ValidationResponse(1, "La planta no existe!");
         }
