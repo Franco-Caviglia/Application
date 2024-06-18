@@ -23,7 +23,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/app/admin")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "http://vps-4183353-x.dattaweb.com:4200")
 public class AppController {
 
     private final AppServiceImpl appService;
