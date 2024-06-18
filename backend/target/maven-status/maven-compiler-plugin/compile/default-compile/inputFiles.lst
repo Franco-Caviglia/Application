@@ -10,6 +10,7 @@ D:\New folder\backend\src\main\java\com\challenge_java_angula\backend\app\servic
 D:\New folder\backend\src\main\java\com\challenge_java_angula\backend\app\service\IAppService.java
 D:\New folder\backend\src\main\java\com\challenge_java_angula\backend\BackendApplication.java
 D:\New folder\backend\src\main\java\com\challenge_java_angula\backend\security\config\ConfigValidation.java
+D:\New folder\backend\src\main\java\com\challenge_java_angula\backend\security\config\WebConfig.java
 D:\New folder\backend\src\main\java\com\challenge_java_angula\backend\security\controller\AuthController.java
 D:\New folder\backend\src\main\java\com\challenge_java_angula\backend\security\dto\request\LoginRequest.java
 D:\New folder\backend\src\main\java\com\challenge_java_angula\backend\security\dto\request\RegisterRequest.java
