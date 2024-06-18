@@ -1,0 +1,256 @@
+:root {
+  display: block;
+}
+
+.login-page {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.backsvg {
+  display: flex;
+  background-image: url('../../../../assets/login/login.svg');
+  width: 60%;
+  height: max-content;
+}
+
+.title h2 {
+  margin-bottom: 5px;
+  font-family: 'Poppins';
+  font-weight: 600;
+  font-size: 48px;
+  color: #ffffff;
+}
+
+.frontsvg {
+  display: flex;
+  position: absolute;
+  width: 60%;
+  flex-direction: column;
+  height: 100vh;
+  background-image: linear-gradient(
+      rgba(51, 163, 170, 0.85),
+      rgba(16, 112, 118, 0.85)
+    ),
+    url('../../../../assets/login/login.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 85%;
+}
+
+.txts {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  top: 50%;
+  left: 128px;
+  transform: translate(0%, -50%);
+}
+
+.login-seccion {
+  display: flex;
+  position: absolute;
+  background-color: #fbfcfc;
+  border: 1px;
+  flex-direction: column;
+  right: 0;
+  z-index: 1000;
+  width: 50%;
+  border-top-left-radius: 32px;
+  border-bottom-left-radius: 32px;
+  height: 100vh;
+}
+
+.items {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.items img {
+  width: max-content;
+  margin-right: 10px;
+  padding: 0;
+  transform: translateY(3px);
+}
+
+.itemTitle {
+  font-family: 'Poppins';
+  font-weight: 500;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.itemDesc {
+  font-family: 'Poppins';
+  font-weight: 400;
+  font-size: 12px;
+  color: #ffffff;
+}
+
+.description {
+  width: 370px;
+  font-family: 'Poppins';
+  font-weight: 400;
+  font-size: 14px;
+  color: #ffffff;
+  height: 72px;
+}
+
+.description p {
+  font-family: 'Poppins';
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.item {
+  width: max-content;
+  height: 41px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.form {
+  display: flex;
+
+  flex-direction: column;
+  width: 393px;
+}
+
+.title-form {
+  width: 368px;
+  height: 55px;
+  font: Poppins;
+  font-weight: 600;
+  font-size: 36.48px;
+  height: 54.71px;
+}
+
+mat-icon {
+  border: none;
+  background-color: none;
+}
+
+.subtitle-form {
+  display: flex;
+  width: max-content;
+  gap: 30px;
+  height: 48px;
+  font-family: 'Poppins';
+  font-weight: 500;
+  font-size: 25px;
+  height: 48px;
+}
+
+.subtitle-form span.active {
+  color: red;
+}
+
+.subtitle-form span:hover {
+  cursor: pointer;
+}
+
+.btn {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  text-align: center;
+}
+
+.btn button {
+  width: 164px;
+  height: 48px;
+}
+
+a {
+  display: flex;
+  margin: 0;
+  top: 50%;
+  transform: translateY(50%);
+  align-items: center;
+  font-family: 'Poppins';
+  font-weight: 400;
+  font-size: 14px;
+  height: 21px;
+  text-decoration: none;
+}
+
+.captcha {
+  color: #84818a;
+  font-family: 'Poppins';
+  font-weight: 400;
+  font-size: 12;
+  height: 17px;
+  margin-top: 25px;
+}
+
+.captcha span {
+  color: #33a3aa;
+}
+
+@media (max-width: 900px) {
+  .frontsvg {
+    overflow: hidden;
+  }
+
+  .login-seccion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0px;
+    width: 100%;
+    height: 100%;
+  }
+
+  mat-form-field {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-seccion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    border-radius: 0px;
+    width: 100%;
+    border: 1px solid black;
+    margin: 0;
+    padding: auto;
+  }
+
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.mat-mdc-unelevated-button.mat-primary {
+  --mdc-filled-button-container-color: #33a3aa;
+  --mdc-filled-button-label-text-color: #ffffff;
+}
+
+.mat-mdc-unelevated-button {
+  font-family: 'Poppins';
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.mat-mdc-outlined-button {
+  font-family: 'Poppins';
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.mat-mdc-outlined-button:not(:disabled) {
+  border-color: #33a3aa;
+}

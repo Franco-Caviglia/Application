@@ -1,0 +1,35 @@
+<div class="sidebar mat-elevation-z8">
+  <div class="logo">
+    <img src="../../../../assets/sidebar/logo.svg" alt="" />
+  </div>
+
+  <div class="menu">
+    <mat-list>
+      <mat-list-item>
+        <a routerLink="/monitorGlobal" (click)="alertSection()">
+          <img src="../../../../assets/sidebar/dashboard.svg" alt="" />
+        </a>
+      </mat-list-item>
+      <mat-list-item>
+        <a routerLink="/plantmonitor" (click)="alertSection()">
+          <img src="../../../../assets/sidebar/plant-monitor.svg" alt="" />
+        </a>
+      </mat-list-item>
+      <mat-list-item>
+        <a routerLink="/historysensor" (click)="alertSection()">
+          <img src="../../../../assets/sidebar/history-sensor.svg" alt="" />
+        </a>
+      </mat-list-item>
+      <mat-list-item>
+        <a routerLink="/historyalarm" (click)="alertSection()">
+          <img src="../../../../assets/sidebar/histoy-alarm.svg" alt="" />
+        </a>
+      </mat-list-item>
+      <mat-list-item>
+        <a (click)="logout()">
+          <img src="../../../../assets/sidebar/logout.svg" alt="" />
+        </a>
+      </mat-list-item>
+    </mat-list>
+  </div>
+</div>

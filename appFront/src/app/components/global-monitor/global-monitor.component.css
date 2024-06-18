@@ -1,0 +1,145 @@
+mat-grid-list {
+  display: flex;
+  width: 90%;
+  max-width: 1400px;
+  min-width: 1200px;
+}
+
+mat-grid-tile {
+  height: max-content;
+  margin-right: 10px;
+  border-radius: 15px;
+}
+
+mat-card {
+  display: flex;
+  justify-content: center;
+  width: 290px;
+  height: 110px;
+  background-color: #ffffff;
+}
+
+mat-card .inds {
+  display: flex;
+  justify-content: center;
+  width: 290px;
+  height: 90px;
+  background-color: #ffffff;
+}
+
+.cont {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.cont .text {
+  display: flex;
+  flex-direction: column;
+}
+
+.text .titles {
+  font-family: 'Poppins';
+  font-weight: 400;
+  font-size: 12px;
+  color: #8e8ea1;
+  height: 18px;
+}
+
+.text .values {
+  font-family: 'Poppins';
+  font-weight: 700;
+  font-size: 20px;
+  height: 30px;
+}
+
+.plants {
+  display: flex;
+  margin-top: 30px;
+  flex-direction: column;
+  border-radius: 15px;
+  max-width: 1400px;
+  min-width: 1200px;
+  width: 90%;
+  background-color: #ffffff;
+}
+
+.top {
+  display: flex;
+  height: 50px;
+  border-bottom: 1px solid #f3f6f7;
+}
+
+.top span {
+  font-family: 'Poppins';
+  font-weight: 600;
+  font-size: 16px;
+  height: 24px;
+  margin-left: 30px;
+  margin-top: 15px;
+}
+
+.top button {
+  height: 24px;
+  margin-left: 15px;
+  margin-top: 15px;
+  font-family: 'Poppins';
+  font-weight: 500;
+  font-size: 12px;
+  color: #000000;
+}
+
+.mat-column-country {
+  text-align: start;
+}
+
+th {
+  font-family: 'Poppins';
+  font-weight: 500;
+  font-size: 14px;
+  height: 21px;
+  color: #b0cad1;
+}
+
+td {
+  font-family: 'Poppins';
+  font-weight: 500;
+  font-size: 12px;
+  height: 18px;
+  color: #000000;
+}
+
+.indicators {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.indicator-txts {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+
+.indicator-txts .values {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 5px;
+}
+
+.indicator-txts .titles {
+  font-family: 'Poppins';
+  font-weight: 400;
+  font-size: 12px;
+  height: 18px;
+  color: #8e8ea1;
+}
+
+.indicator-txts span {
+  font-family: 'Poppins';
+  font-weight: 400;
+  font-size: 12px;
+  height: 18px;
+}

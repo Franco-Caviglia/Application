@@ -1,0 +1,98 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  height: max-content;
+}
+
+.head {
+  display: flex;
+  justify-content: center;
+}
+
+.head h2 {
+  position: absolute;
+  left: 35px;
+  display: flex;
+  font-family: 'Poppins';
+  font-weight: 500;
+  font-size: 14px;
+  height: 21px;
+  color: #000000;
+}
+
+.form {
+  display: flex;
+  margin-top: 45px;
+  justify-content: center;
+  gap: 10px;
+}
+
+.list {
+  display: flex;
+  width: 320px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 0;
+}
+
+label {
+  display: flex;
+  width: 320px;
+  margin-bottom: 10px;
+  justify-content: start;
+  align-items: start;
+  font-family: 'Poppins';
+  font-weight: 500;
+  font-size: 14px;
+  height: 21px;
+  color: #838b9e;
+}
+
+mat-form-field {
+  width: 320px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.btns {
+  display: flex;
+  margin-top: 25px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.btns button {
+  width: 100px;
+  height: 36px;
+}
+
+.mat-mdc-unelevated-button.mat-primary {
+  --mdc-filled-button-container-color: #33a3aa;
+}
+
+.mat-mdc-unelevated-button.mat-primary {
+  --mdc-filled-button-container-color: #33a3aa;
+  --mdc-filled-button-label-text-color: #ffffff;
+}
+
+.mat-mdc-outlined-button:not(:disabled) {
+  color: #33a3aa;
+}
+
+.mat-mdc-unelevated-button {
+  font-family: 'Poppins';
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.mat-mdc-outlined-button {
+  font-family: 'Poppins';
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.mat-mdc-outlined-button:not(:disabled) {
+  border-color: #33a3aa;
+}

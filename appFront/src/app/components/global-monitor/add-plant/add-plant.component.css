@@ -1,0 +1,82 @@
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.head {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 20px;
+  font-family: 'Poppins';
+  font-weight: 400;
+  font-size: 14px;
+  height: 21px;
+}
+
+.form {
+  display: flex;
+  width: max-content;
+  position: absolute;
+  left: 25px;
+  justify-content: start;
+  flex-direction: column;
+  margin-top: 25px;
+}
+
+.form label {
+  font-family: 'Poppins';
+  font-weight: 500;
+  font-size: 14px;
+  height: 21px;
+  color: #838b9e;
+}
+
+mat-form-field {
+  width: 320px;
+}
+
+.btns {
+  display: flex;
+  position: absolute;
+  bottom: 10px;
+  gap: 10px;
+}
+
+.btns button {
+  width: 100px;
+  height: 36px;
+}
+
+.mat-mdc-unelevated-button.mat-primary {
+  --mdc-filled-button-container-color: #33a3aa;
+}
+
+.mat-mdc-unelevated-button.mat-primary {
+  --mdc-filled-button-container-color: #33a3aa;
+  --mdc-filled-button-label-text-color: #ffffff;
+}
+
+.mat-mdc-outlined-button:not(:disabled) {
+  color: #33a3aa;
+}
+
+.mat-mdc-unelevated-button {
+  font-family: 'Poppins';
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.mat-mdc-outlined-button {
+  font-family: 'Poppins';
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.mat-mdc-outlined-button:not(:disabled) {
+  border-color: #33a3aa;
+}

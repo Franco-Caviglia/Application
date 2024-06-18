@@ -1,0 +1,47 @@
+<div class="card">
+  <div class="head">
+    <h2>Editar planta</h2>
+  </div>
+  <div class="form">
+    <div class="list">
+      <label>Nombre planta</label>
+      <mat-form-field>
+        <input matInput [(ngModel)]="plantInfo().plantName" disabled />
+      </mat-form-field>
+      <label>Cantidad de lecturas</label>
+      <mat-form-field>
+        <input matInput placeholder="25" [(ngModel)]="plantInfo().readings" />
+      </mat-form-field>
+      <label>Cantidad de alertas medias</label>
+      <mat-form-field>
+        <input matInput placeholder="25" [(ngModel)]="plantInfo().avgAlerts" />
+      </mat-form-field>
+    </div>
+    <div class="list">
+      <label>País</label>
+      <mat-form-field>
+        <input matInput [(ngModel)]="plantInfo().country" disabled />
+      </mat-form-field>
+      <label>Cantidad de alertas rojas</label>
+      <mat-form-field>
+        <input matInput placeholder="25" [(ngModel)]="plantInfo().redAlerts" />
+      </mat-form-field>
+      <label>Cantidad Sensores deshab.</label>
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="25"
+          [(ngModel)]="plantInfo().disabledSensors"
+        />
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="btns">
+    <button class="cancel" mat-stroked-button (click)="closeInfo()">
+      Cancelar
+    </button>
+    <button class="agree" mat-flat-button color="primary" (click)="editPlant()">
+      Confirmar
+    </button>
+  </div>
+</div>

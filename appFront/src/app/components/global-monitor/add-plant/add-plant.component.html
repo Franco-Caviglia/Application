@@ -1,0 +1,27 @@
+<div class="card">
+  <div class="head">
+    <h2>Crear nueva planta</h2>
+  </div>
+  <div class="form">
+    <label>Nombre de la planta</label>
+    <mat-form-field>
+      <input matInput placeholder="Rosario" [formControl]="plantName" />
+    </mat-form-field>
+
+    <label>País</label>
+    <mat-form-field>
+      <mat-select placeholder="Seleccione un país" [formControl]="country">
+        @for(country of countries; track $index){
+        <mat-option [value]="country">
+          {{ country }}
+        </mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div class="btns">
+    <button mat-stroked-button (click)="close()">Cancelar</button>
+    <button mat-flat-button color="primary" (click)="addPlant()">Crear</button>
+  </div>
+</div>

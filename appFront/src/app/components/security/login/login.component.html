@@ -1,0 +1,158 @@
+<div class="backsvg">
+  <div class="frontsvg">
+    <div class="txts">
+      <div class="title">
+        <h2>Iniciar sesión</h2>
+      </div>
+      <div class="description">
+        <p>
+          Nos alegra tenerte de vuelta y estamos listos para atender tus
+          necesidades. Inicia sesión y continúa aprovechando al máximo nuestra
+          plataforma.
+        </p>
+      </div>
+      <mat-list>
+        <mat-list-item>
+          <div matListItemTitle class="items">
+            <span class="itemTitle"
+              ><img
+                src="../../../../assets/login/monitoring.svg"
+                alt=""
+              />Monitoreo integral</span
+            >
+          </div>
+          <div matListItemLine style="margin-left: 30px">
+            <span class="itemDesc"
+              >Administra, monitorea mutiples plantas de forma
+              centralizada</span
+            >
+          </div>
+        </mat-list-item>
+
+        <div class="item">
+          <mat-list-item>
+            <div matListItemTitle class="items">
+              <span class="itemTitle"
+                ><img
+                  src="../../../../assets/login/notification.svg"
+                  alt=""
+                />Notificaciones en tiempo real</span
+              >
+            </div>
+            <div matListItemLine style="margin-left: 30px">
+              <span class="itemDesc"
+                >Recibi notificaciones en tiempo real sobre las mediciones</span
+              >
+            </div>
+          </mat-list-item>
+        </div>
+      </mat-list>
+    </div>
+  </div>
+</div>
+<div class="login-seccion">
+  <div class="login-form">
+    <div class="title-form">Portal de monitoreo</div>
+    <div class="subtitle-form">
+      <span
+        (click)="loginFormView = true"
+        [style]="!loginFormView ? 'color: grey' : 'color: black'"
+        >Iniciar sesión</span
+      >
+      <span
+        (click)="loginFormView = false"
+        [style]="loginFormView ? 'color: grey' : 'color: black'"
+        >Registrarse</span
+      >
+    </div>
+
+    @if(loginFormView){
+    <div class="form">
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input
+          matInput
+          placeholder="example@gmail.com"
+          [formControl]="email"
+          required
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Enter your password</mat-label>
+        <input
+          matInput
+          [formControl]="password"
+          [type]="hide ? 'password' : 'text'"
+        />
+        <button
+          mat-icon-button
+          matSuffix
+          (click)="clickEvent()"
+          [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide"
+        >
+          <mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
+        </button>
+      </mat-form-field>
+      <div class="btn">
+        <a>¿Olvidaste tu contraseña?</a>
+        <button mat-flat-button color="primary" (click)="login()">
+          Iniciar sesión
+        </button>
+      </div>
+    </div>
+    <div class="captcha">
+      Protegido por reCAPTCHA y sujeto a la
+      <span>Política de Privacidad</span> y <span>Condiciones.</span>
+    </div>
+    } @if(loginFormView == false){
+    <div class="form">
+      <mat-form-field>
+        <mat-label>Nombre</mat-label>
+        <input
+          matInput
+          placeholder="Carlos Alvarez"
+          [formControl]="name"
+          required
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input
+          matInput
+          placeholder="example@gmail.com"
+          [formControl]="email"
+          required
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Enter your password</mat-label>
+        <input
+          matInput
+          [formControl]="password"
+          [type]="hide ? 'password' : 'text'"
+        />
+        <button
+          mat-icon-button
+          matSuffix
+          (click)="clickEvent()"
+          [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide"
+        >
+          <mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
+        </button>
+      </mat-form-field>
+      <div class="btn">
+        <a>¿Olvidaste tu contraseña?</a>
+        <button mat-flat-button color="primary" (click)="register()">
+          Registrarse
+        </button>
+      </div>
+    </div>
+    <div class="captcha">
+      Protegido por reCAPTCHA y sujeto a la
+      <span>Política de Privacidad</span> y <span>Condiciones.</span>
+    </div>
+    }
+  </div>
+</div>

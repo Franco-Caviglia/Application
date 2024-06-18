@@ -1,0 +1,286 @@
+<div class="cards">
+  <mat-grid-list cols="4" rowHeight="150px">
+    <mat-grid-tile>
+      <mat-card>
+        <div class="cont">
+          <div class="text">
+            <span class="titles">Lecturas OK</span>
+            <span class="values">{{ readings() || 1540 }}</span>
+          </div>
+          <div class="icon">
+            <img src="../../../assets/global-monitor/readings.svg" alt="" />
+          </div>
+        </div>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-card>
+        <div class="cont">
+          <div class="text">
+            <span class="titles">Alertas medias</span>
+            <span class="values">{{ avgAlerts() || 1540 }}</span>
+          </div>
+          <div class="icon">
+            <img src="../../../assets/global-monitor/avgAlerts.svg" alt="" />
+          </div>
+        </div>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-card>
+        <div class="cont">
+          <div class="text">
+            <span class="titles">Alertas rojas</span>
+            <span class="values">{{ redAlerts() || 1540 }}</span>
+          </div>
+          <div class="icon">
+            <img src="../../../assets/global-monitor/redAlerts.svg" alt="" />
+          </div>
+        </div>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-card>
+        <div class="cont">
+          <div class="text">
+            <span class="titles">Sensores deshabilitados</span>
+            <span class="values">{{ disabledSensors() || 1540 }}</span>
+          </div>
+          <div class="icon">
+            <img
+              src="../../../assets/global-monitor/disabledSensors.svg"
+              alt=""
+            />
+          </div>
+        </div>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+
+<div class="plants">
+  <div class="top">
+    <span>Plantas</span>
+    <button mat-stroked-button (click)="newPlant()">
+      + Crear nueva planta
+    </button>
+  </div>
+  <div class="table">
+    <table mat-table [dataSource]="plants()">
+      <ng-container matColumnDef="country">
+        <th mat-header-cell *matHeaderCellDef>País</th>
+        <td mat-cell *matCellDef="let element">{{ element.country }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="plantName">
+        <th mat-header-cell *matHeaderCellDef>Nombre de la planta</th>
+        <td mat-cell *matCellDef="let element">{{ element.plantName }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="readings">
+        <th mat-header-cell *matHeaderCellDef>Lecturas</th>
+        <td mat-cell *matCellDef="let element">{{ element.readings }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="avgAlerts">
+        <th mat-header-cell *matHeaderCellDef>Alertas medias</th>
+        <td mat-cell *matCellDef="let element">{{ element.avgAlerts }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="redAlerts">
+        <th mat-header-cell *matHeaderCellDef>Alertas rojas</th>
+        <td mat-cell *matCellDef="let element">{{ element.redAlerts }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef>Acciones</th>
+        <td mat-cell *matCellDef="let element">
+          <button mat-icon-button [matMenuTriggerFor]="menu">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="editPlant(element.plantId)">
+              <span>Editar</span>
+            </button>
+            <button mat-menu-item (click)="deletePlant(element.plantId)">
+              <span>Eliminar</span>
+            </button>
+          </mat-menu>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+  </div>
+</div>
+
+<div class="indicators">
+  <mat-grid-list cols="4" rowHeight="125px">
+    <mat-grid-tile>
+      <mat-card class="inds">
+        <div class="cont">
+          <div class="indicator-txts">
+            <span class="titles">Temperatura</span>
+            <div class="values">
+              <img src="../../../assets/global-monitor/checking.svg" alt="" />
+              <span class="itemValue">100</span>
+              <img src="../../../assets/global-monitor/warning.svg" alt="" />
+              <span class="itemValue">20</span>
+              <img src="../../../assets/global-monitor/alerting.svg" alt="" />
+              <span class="itemValue">3</span>
+            </div>
+          </div>
+          <div class="icon">
+            <img src="../../../assets/global-monitor/temperature.svg" alt="" />
+          </div>
+        </div>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-card>
+        <div class="cont">
+          <div class="indicator-txts">
+            <span class="titles">Presión</span>
+            <div class="values">
+              <img src="../../../assets/global-monitor/checking.svg" alt="" />
+              <span class="itemValue">100</span>
+              <img src="../../../assets/global-monitor/warning.svg" alt="" />
+              <span class="itemValue">20</span>
+              <img src="../../../assets/global-monitor/alerting.svg" alt="" />
+              <span class="itemValue">3</span>
+            </div>
+          </div>
+          <div class="icon">
+            <img src="../../../assets/global-monitor/speed.svg" alt="" />
+          </div>
+        </div>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-card>
+        <div class="cont">
+          <div class="indicator-txts">
+            <span class="titles">Viento</span>
+            <div class="values">
+              <img src="../../../assets/global-monitor/checking.svg" alt="" />
+              <span class="itemValue">100</span>
+              <img src="../../../assets/global-monitor/warning.svg" alt="" />
+              <span class="itemValue">20</span>
+              <img src="../../../assets/global-monitor/alerting.svg" alt="" />
+              <span class="itemValue">3</span>
+            </div>
+          </div>
+          <div class="icon">
+            <img src="../../../assets/global-monitor/wind.svg" alt="" />
+          </div>
+        </div>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-card>
+        <div class="cont">
+          <div class="indicator-txts">
+            <span class="titles">Niveles</span>
+            <div class="values">
+              <img src="../../../assets/global-monitor/checking.svg" alt="" />
+              <span class="itemValue">100</span>
+              <img src="../../../assets/global-monitor/warning.svg" alt="" />
+              <span class="itemValue">20</span>
+              <img src="../../../assets/global-monitor/alerting.svg" alt="" />
+              <span class="itemValue">3</span>
+            </div>
+          </div>
+          <div class="icon">
+            <img src="../../../assets/global-monitor/levels.svg" alt="" />
+          </div>
+        </div>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+  <mat-grid-list cols="4" rowHeight="125px">
+    <mat-grid-tile>
+      <mat-card>
+        <div class="cont">
+          <div class="indicator-txts">
+            <span class="titles">Energía</span>
+            <div class="values">
+              <img src="../../../assets/global-monitor/checking.svg" alt="" />
+              <span class="itemValue">100</span>
+              <img src="../../../assets/global-monitor/warning.svg" alt="" />
+              <span class="itemValue">20</span>
+              <img src="../../../assets/global-monitor/alerting.svg" alt="" />
+              <span class="itemValue">3</span>
+            </div>
+          </div>
+          <div class="icon">
+            <img src="../../../assets/global-monitor/energy.svg" alt="" />
+          </div>
+        </div>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-card>
+        <div class="cont">
+          <div class="indicator-txts">
+            <span class="titles">Tensión</span>
+            <div class="values">
+              <img src="../../../assets/global-monitor/checking.svg" alt="" />
+              <span class="itemValue">100</span>
+              <img src="../../../assets/global-monitor/warning.svg" alt="" />
+              <span class="itemValue">20</span>
+              <img src="../../../assets/global-monitor/alerting.svg" alt="" />
+              <span class="itemValue">3</span>
+            </div>
+          </div>
+          <div class="icon">
+            <img src="../../../assets/global-monitor/tension.svg" alt="" />
+          </div>
+        </div>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-card>
+        <div class="cont">
+          <div class="indicator-txts">
+            <span class="titles">Monóxido de carbono</span>
+            <div class="values">
+              <img src="../../../assets/global-monitor/checking.svg" alt="" />
+              <span class="itemValue">100</span>
+              <img src="../../../assets/global-monitor/warning.svg" alt="" />
+              <span class="itemValue">20</span>
+              <img src="../../../assets/global-monitor/alerting.svg" alt="" />
+              <span class="itemValue">3</span>
+            </div>
+          </div>
+          <div class="icon">
+            <img
+              src="../../../assets/global-monitor/carbonmonoxide.svg"
+              alt=""
+            />
+          </div>
+        </div>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-card>
+        <div class="cont">
+          <div class="indicator-txts">
+            <span class="titles">Otros gases</span>
+            <div class="values">
+              <img src="../../../assets/global-monitor/checking.svg" alt="" />
+              <span class="itemValue">100</span>
+              <img src="../../../assets/global-monitor/warning.svg" alt="" />
+              <span class="itemValue">20</span>
+              <img src="../../../assets/global-monitor/alerting.svg" alt="" />
+              <span class="itemValue">3</span>
+            </div>
+          </div>
+          <div class="icon">
+            <img src="../../../assets/global-monitor/othersgas.svg" alt="" />
+          </div>
+        </div>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

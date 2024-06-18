@@ -1,0 +1,12 @@
+<div class="login" *ngIf="isLoggin == false">
+  <app-login></app-login>
+</div>
+
+<div class="pages" *ngIf="isLoggin == true">
+  <app-sidebar></app-sidebar>
+  <app-header></app-header>
+
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+</div>
