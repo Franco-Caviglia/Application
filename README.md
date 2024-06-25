@@ -1,5 +1,7 @@
 Proyecto completo Monitoreo de Plantas;
 
+NO UTILIZAR: fran@gmail.com (No tiene control de duplicidad de mails, y tira error ya que registre dos veces ese mail);
+
 Esta dockerizado y desplegada en una VPS.
 
 Cada proyecto (back y front) tienen sus readme con una descripción de lo que utilizé y los endpoints;
